@@ -5,7 +5,7 @@
   <title>Revalate Pricing</title>
   <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
   <style>
-    /* reset and base */
+    /* Reset & base */
     *, *::before, *::after {
       margin: 0;
       padding: 0;
@@ -16,24 +16,46 @@
       height: 100%;
       background-color: #111111;
     }
-    /* flex‐center the pricing table */
+    /* Center container in viewport */
     body {
       display: flex;
-      align-items: center;
       justify-content: center;
-      height: 100vh;      /* ensure full‐screen centering */
+      align-items: center;
+      height: 100vh;
+      font-family: sans-serif;
     }
-    /* constrain width if you like */
-    stripe-pricing-table {
+    /* Constrain width & layout */
+    .container {
       width: 100%;
       max-width: 1200px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    /* Logo styling */
+    .logo {
+      display: block;
+      margin-bottom: 24px;
+      width: auto;
+      height: 40px; /* adjust as needed */
+    }
+    /* Pricing table fills container width */
+    stripe-pricing-table {
+      width: 100%;
     }
   </style>
 </head>
 <body>
-  <stripe-pricing-table
-    pricing-table-id="prctbl_1RemWJL1GrJAX8xue2lsYNB8"
-    publishable-key="pk_live_51MEKJpL1GrJAX8xuTMcqrHSURnwCeFn6InaL2gLT4s2TqA1uaFoxNQBzOFXh1obkvDcKSU0KJ3VGD7AyyPaycz9S00h1F7mXDf">
-  </stripe-pricing-table>
+  <div class="container">
+    <img
+      src="https://storage.googleapis.com/rev-logo-files/revalate-logo.png"
+      alt="Revalate logo"
+      class="logo"
+    />
+    <stripe-pricing-table
+      pricing-table-id="prctbl_1RemWJL1GrJAX8xue2lsYNB8"
+      publishable-key="pk_live_51MEKJpL1GrJAX8xuTMcqrHSURnwCeFn6InaL2gLT4s2TqA1uaFoxNQBzOFXh1obkvDcKSU0KJ3VGD7AyyPaycz9S00h1F7mXDf">
+    </stripe-pricing-table>
+  </div>
 </body>
 </html>
