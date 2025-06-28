@@ -4,6 +4,24 @@
   <meta charset="UTF-8" />
   <title>Revalate Pricing</title>
   <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+  <style>
+    html, body {
+      background-color: #111111;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* optional: constrain the pricing table width */
+    stripe-pricing-table {
+      width: 100%;
+      max-width: 1200px;
+    }
+  </style>
 </head>
 <body>
   <stripe-pricing-table
